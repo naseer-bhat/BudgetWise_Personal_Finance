@@ -1,4 +1,4 @@
-import Budget from "../models/Budget.js";
+import Budget from "../models/budget.js";
 
 export const createBudget = async (req, res) => {
   try {
