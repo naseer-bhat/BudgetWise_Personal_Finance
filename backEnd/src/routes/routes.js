@@ -1,0 +1,9 @@
+import { Router } from "express";
+import budgetRoutes from "./budgetRoutes.js";
+import goalRoutes from "./goalRoutes.js";
+import authRoutes from "./authRoute.js";
+const router = Router();
+router.use("/auth", authRoutes);
+router.use("/budget", budgetRoutes);
+router.use("/goal", goalRoutes);
+export default router;
