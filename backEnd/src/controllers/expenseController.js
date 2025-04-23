@@ -1,5 +1,4 @@
 
-import e from "express";
 import Expense from "../models/expense.js";
 
 export const createExpense = async (req, res) => {

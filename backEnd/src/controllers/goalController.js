@@ -1,4 +1,4 @@
-import Goal from "../models/Goal.js";
+import Goal from "../models/goal.js";
 export const createGoal = async (req, res) => {
   try {
     const goal = await Goal.create(req.body);
