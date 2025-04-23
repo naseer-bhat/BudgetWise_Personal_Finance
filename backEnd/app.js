@@ -1,8 +1,14 @@
-const express = require('express');
-const mongoose = require('mongoose');
+// const express = require('express');
+// const mongoose = require('mongoose');
+
+import express from 'express'
+import mongoose from 'mongoose'
 const app = express();
-const {rateLimit}=require('express-rate-limit')
-const helmet = require('helmet');
+// const {rateLimit}=require('express-rate-limit')
+import rateLimit from 'express-rate-limit'
+// const helmet = require('helmet');
+import helmet from 'helmet'
+
 const limiter= rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
     limit: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
@@ -15,8 +21,10 @@ app.use(limiter)
 app.use(helmet())
 app.use(express.json());
 
-const budgetRoutes = require('./routes/budgets');
-const goalRoutes = require('./routes/goals');
+// const budgetRoutes = require('./routes/budgets');
+import budgetRoutes from './routes/budgets';
+// const goalRoutes = require('./routes/goals');
+import goalRoutes from './routes/goals';
 
 app.use('/api/budgets', budgetRoutes);
 app.use('/api/goals', goalRoutes);

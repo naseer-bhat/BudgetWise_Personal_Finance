@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-
+// const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const goalSchema = new mongoose.Schema({
     userId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -24,4 +24,4 @@ const goalSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Goal', goalSchema);
+export default  mongoose.model('Goal', goalSchema);

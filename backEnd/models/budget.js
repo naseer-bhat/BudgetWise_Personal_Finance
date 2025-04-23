@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const budgetSchema = new mongoose.Schema({
     userId: {
@@ -24,4 +25,4 @@ const budgetSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Budget', budgetSchema);
+ export default mongoose.model('Budget', budgetSchema);

@@ -1,6 +1,10 @@
-const express = require('express');
+// const express = require('express');
+import express from 'express';
+
 const router = express.Router();
-const Goal = require('../models/Goal');
+
+// const Goal = require('../models/Goal');
+import Goal from '../models/Goal';
 
 // Create Goal
 router.post('/', async (req, res) => {
@@ -46,4 +50,4 @@ router.delete('/:goalId', async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;

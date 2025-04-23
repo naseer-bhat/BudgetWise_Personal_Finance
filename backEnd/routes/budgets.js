@@ -1,6 +1,8 @@
-const express = require('express');
+// const express = require('express');
+import express from 'express';
 const router = express.Router();
-const Budget = require('../models/Budget');
+import Budget from '../models/Budget';
+// const Budget = require('../models/Budget');
 
 // Create Budget
 router.post('/', async (req, res) => {
@@ -46,4 +48,4 @@ router.delete('/:budgetId', async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;
