@@ -1,6 +1,6 @@
 // jobs/budgetNotifier.js
-import Budget from "../models/Budget.js";
-import Expense from "../models/Expense.js";
+import Budget from "../models/budget.js";
+import Expense from "../models/expense.js";
 import Notification from "../models/Notification.js";
 import { io, connectedUsers } from "../../app.js"; // use exported values
 
