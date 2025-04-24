@@ -46,17 +46,30 @@ This is the backend service for the BudgetWise Personal Finance application. It 
   npm start
   ```
 
+  ## API Endpoints
 
-  | Method | Endpoint              | Description                     |
-  |--------|-----------------------|---------------------------------|
-  | POST   | `/api/auth/login`     | User login                      |
-  | POST   | `/api/auth/signup`    | User registration               |
-  | GET    | `/api/budget`         | Get all budgets                 |
-  | POST   | `/api/budget`         | Create a new budget             |
-  | GET    | `/api/goal`           | Get all financial goals         |
-  | POST   | `/api/goal`           | Create a new financial goal     |
-  | GET    | `/api/expense`        | Get all expenses                |
-  | POST   | `/api/expense`        | Add a new expense               |
+  | Method   | Endpoint                        | Description                              |
+  |----------|---------------------------------|------------------------------------------|
+  | POST     | `/api/auth/login`               | Authenticate user and return a token     |
+  | POST     | `/api/auth/signup`              | Register a new user                      |
+  | GET      | `/api/budget/getbudget`         | Retrieve all budgets                     |
+  | GET      | `/api/budget/getbudget/:id`     | Retrieve a specific budget by ID         |
+  | PUT      | `/api/budget/updatebudget/:id`  | Update an existing budget by ID          |
+  | DELETE   | `/api/budget/deletebudget/:id`  | Delete a specific budget by ID           |
+  | POST     | `/api/budget/create`            | Create a new budget                      |
+  | GET      | `/api/goal/:userId`             | Retrieve all financial goals for a user  |
+  | GET      | `/api/goal/user/:userId`        | Retrieve financial goals for a user      |
+  | PATCH    | `/api/goal/:goalId`             | Partially update a financial goal by ID  |
+  | PUT      | `/api/goal/:goalId`             | Update a financial goal by ID            |
+  | DELETE   | `/api/goal/:goalId`             | Delete a financial goal by ID            |
+  | DELETE   | `/api/goal/delete:goalId`       | Remove a financial goal by ID            |
+  | POST     | `/api/goal/create`              | Create a new financial goal              |
+  | GET      | `/api/expense/getall`           | Retrieve all expenses                    |
+  | GET      | `/api/expense/:id`              | Retrieve a specific expense by ID        |
+  | POST     | `/api/expense/create`           | Add a new expense                        |
+  | PUT      | `/api/expense/update/:id`       | Update an existing expense by ID         |
+  | DELETE   | `/api/expense/delete/:id`       | Delete a specific expense by ID          |
+  |----------|---------------------------------|
 
 ## Folder Structure
 

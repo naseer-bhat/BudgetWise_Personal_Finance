@@ -7,9 +7,9 @@ import {
   deleteExpense,
 } from '../controllers/expenseController.js'; 
 const router = Router();
-router.get('/', getAllExpenses); 
+router.get('/getall', getAllExpenses); 
 router.get('/:id', getExpenseById); 
-router.post('/', createExpense); 
-router.put('/:id', updateExpense); 
-router.delete('/:id', deleteExpense); 
+router.post('/create', createExpense); 
+router.put('/update/:id', updateExpense); 
+router.delete('/delete/:id', deleteExpense); 
 export default router;

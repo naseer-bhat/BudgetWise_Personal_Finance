@@ -9,7 +9,7 @@ import {
   deleteGoalById,
 } from "../controllers/goalController.js";
 const router = Router();
-router.post("/", createGoal);
+router.post("/create", createGoal);
 router.get("/:userId", getGoals);
 router.get("/user/:userId", getGoalsByUserId);
 router.patch("/:goalId", updateGoal);
