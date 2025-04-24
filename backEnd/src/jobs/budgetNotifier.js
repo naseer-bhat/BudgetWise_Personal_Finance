@@ -8,7 +8,7 @@ export const checkBudgetLimits = async () => {
     const budgets = await Budget.find();
 
     for (const budget of budgets) {
-        const expenses = await expense.aggregate([
+        const expenses = await Expense.aggregate([
             {
                 $match: {
                     userId: budget.userId,
