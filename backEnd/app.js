@@ -43,7 +43,8 @@ io.on("connection", (socket) => {
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
-connectToDB(process.env.MONGODB_URI);
+const DBUrl = process.env.MONGO_URL||"mongodb://localhost:27017/";
+connectToDB(DBUrl);
 
 // Routes
 app.use("/api/", allRoutes);

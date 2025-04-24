@@ -28,4 +28,4 @@ const BudgetSchema = new Schema(
   { timestamps: true }
 );
 
-export default model('Budget', BudgetSchema);
+export default   model("Budget", BudgetSchema);
