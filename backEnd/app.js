@@ -45,9 +45,9 @@ app.use(helmet());
 app.use(express.json());
 const DBUrl = process.env.MONGO_URL||"mongodb://localhost:27017/";
 connectToDB(DBUrl);
-app.get("/health", (req, res) => {
-    res.status(200).send("OK");
-})
+// app.get("/health", (req, res) => {
+//     res.status(200).send("OK");
+// })
 // Routes
 app.use("/api/", allRoutes);
 
